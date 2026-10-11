@@ -25,9 +25,15 @@
   
   </div>
 </nav>
+
     <div class="container">
-    
+        <div>
+          @RenderSection("title",false)
+        </div>
+        <div>
+
         @RenderBody()
+        </div>
     </div>
 </body>
 </html>
