@@ -1,4 +1,5 @@
 using System.ComponentModel.Design;
+using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using WebApp.Models;
 namespace WebApp.AddControllersWithViews
@@ -44,6 +45,11 @@ namespace WebApp.AddControllersWithViews
                 return RedirectToAction(nameof(Index));
             }
             return View("AddCategory",category);
+        }
+        public IActionResult DeleteCategoryById(int CategoryId)
+        {
+            CategoriesRepository.DeleteCategory(CategoryId);
+             return RedirectToAction(nameof(Index));
         }
     }
 }

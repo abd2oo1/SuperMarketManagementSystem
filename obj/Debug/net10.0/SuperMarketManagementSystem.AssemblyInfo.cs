@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SuperMarketManagementSystem")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d498aca743a70444af90339fbe49a8d43f333020")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8188c58a148d02c4548600a5bad3cca4cb4a691f")]
 [assembly: System.Reflection.AssemblyProductAttribute("SuperMarketManagementSystem")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SuperMarketManagementSystem")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
