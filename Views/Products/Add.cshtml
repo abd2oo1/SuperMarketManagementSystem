@@ -1,0 +1,66 @@
+@* @using WebApp.Models *@
+@using WebApp.ViewModels
+@model ProductViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@section title {
+    <h3>Add Product </h3>
+}
+ 
+
+<form method="post" asp-controller="Products" asp-action="Add">
+
+
+    <div class="text-danger" asp-validation-summary="All"></div>
+
+
+    <div class="mb-3 row">
+        <div class="col-2">
+            <label asp-for="Product.CategoryId" class="col-form-label"></label>
+        </div>
+        <div class="col-6">
+            <select asp-for="Product.CategoryId" class="form-select">
+                <option disabled selected>--Select Category--</option>
+                @if (Model.Categories != null && Model.Categories.Count() > 0)
+                {
+                    @foreach (var category in Model.Categories)
+                    {
+                        <option value="@category.CategoryId">@category.Name</option>
+                    }
+                }
+            </select>
+        </div>
+    </div>
+
+
+    <div class="row mb-3">
+        <div class="col-2">
+            <label asp-for="Product.Name" class="col-form-label"> Name</label>
+        </div>
+        <div class="col-6">
+            <input type="text" asp-for="Product.Name" class="form-control"></label>
+        </div>
+    
+    </div>
+    <div class="row mb-3">
+        <div class="col-2">
+            <label asp-for="Product.Price" class="col-form-label"> Price</label>
+        </div>
+        <div class="col-6">
+            <input type="number" asp-for="Product.Price" class="form-control" min="0" step="any" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-2">
+            <label asp-for="Product.Quantity" class="col-form-label"> Quantity</label>
+        </div>
+        <div class="col-6">
+            <input type="number" asp-for="Product.Quantity" class="form-control" min="0" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2">
+            <input type="submit" class="btn btn-primary" value="save" />
+        </div>
+    
+    </div>
+</form>
